@@ -21,7 +21,8 @@ app.use(express.urlencoded({
 
 //Homepage Route
 app.get('/', (req, res) => res.render('index', {
-    title: 'Member App Area'
+    title: 'Member App Area',
+    members: members
 }))
 
 

@@ -49,12 +49,14 @@ router.post('/', (req, res) => {
 
     if (!repeated) {
         members.push(newMember)
-        res.json(members)
+        // res.json(members) //  if I want to use the API
+        res.redirect('/') // if I want to use the template
     } else {
         res.json({
             msg: "User already exists | Repeated mail"
         })
     }
+
 })
 
 
